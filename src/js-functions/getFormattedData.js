@@ -12,6 +12,5 @@ export function getFormattedData(data) {
     );
     formattedData.push(newDate);
   }
-  console.log(formattedData);
   return formattedData;
 }
