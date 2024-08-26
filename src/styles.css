@@ -10,14 +10,17 @@
 body {
   background-color: #2196f2;
   height: 100vh;
+  font-family: Roboto;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 header {
-  font-family: Roboto;
   font-size: 2rem;
+  justify-self: center;
+  padding-bottom: 2%;
 }
 main {
   justify-self: center;
@@ -27,4 +30,16 @@ main {
   border-radius: 1rem;
   width: 80%;
   height: 80%;
+}
+.city-title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px double white;
+  padding: 1rem;
+  font-size: 3rem;
+}
+.city-title span {
+  font-size: 2.1rem;
 }
