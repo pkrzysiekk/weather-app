@@ -38,8 +38,16 @@ main {
   align-items: center;
   border-bottom: 1px double white;
   padding: 1rem;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .city-title span {
   font-size: 2.1rem;
+}
+.city-title input {
+  all: unset;
+  border-bottom: 1px double white;
+}
+.city-title ::placeholder {
+  color: white;
+  text-align: start;
 }
