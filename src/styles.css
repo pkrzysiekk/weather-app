@@ -51,3 +51,6 @@ main {
   color: white;
   text-align: start;
 }
+.content {
+  display: grid;
+}
