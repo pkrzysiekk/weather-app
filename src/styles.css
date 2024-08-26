@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/roboto.woff2");
+}
 * {
   padding: 0;
   margin: 0;
@@ -7,8 +11,13 @@ body {
   background-color: #2196f2;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+header {
+  font-family: Roboto;
+  font-size: 2rem;
 }
 main {
   justify-self: center;

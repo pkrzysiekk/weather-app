@@ -1,4 +1,4 @@
-import { Day } from "../dayClass";
+import { Day } from "./dayClass";
 import { connectToAPI } from "./connectToAPI";
 
 export function getFormattedData(data) {
