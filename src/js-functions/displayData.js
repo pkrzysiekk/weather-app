@@ -1,3 +1,5 @@
+import { celsiusSelected } from "./changeTempUnit";
+import { convertToCelsius } from "./convertToCelsius";
 import { getWeatherIcon } from "./getWeatherIcon";
 export function displayData(data) {
   const currentDayDiv = document.querySelector(".current-day");
@@ -12,8 +14,17 @@ export function displayData(data) {
     const conditionsParagraph = document.createElement("p");
     const weatherIcon = document.createElement("p");
     dayParagraph.textContent = data[i].day.slice(5);
-    minTempParagraph.textContent = `Min temp: ${data[i].tempMin} °F`;
-    maxTempParagraph.textContent = `Max temp: ${data[i].tempMax} °F`;
+    if (!celsiusSelected) {
+      minTempParagraph.textContent = `Min temp: ${data[i].tempMin} °F`;
+      maxTempParagraph.textContent = `Max temp: ${data[i].tempMax} °F`;
+    } else {
+      minTempParagraph.textContent = `Min temp: ${convertToCelsius(
+        data[i].tempMin
+      )} °C`;
+      maxTempParagraph.textContent = `Max temp: ${convertToCelsius(
+        data[i].tempMax
+      )} °C`;
+    }
     conditionsParagraph.textContent = data[i].conditions;
     weatherIcon.textContent = getWeatherIcon(data[i].conditions);
 

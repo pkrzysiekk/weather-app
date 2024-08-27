@@ -1,3 +1,4 @@
+import { changeTempUnit } from "./js-functions/changeTempUnit";
 import { clearMain } from "./js-functions/clearMain";
 import { connectToAPI } from "./js-functions/connectToAPI";
 import { displayData } from "./js-functions/displayData";
@@ -6,6 +7,7 @@ import { getFormattedData } from "./js-functions/getFormattedData";
 import { getFormData } from "./js-functions/getFormData";
 import "./styles.css";
 const cityForm = document.getElementById("city-form");
+const degreeButton = document.getElementById("degrees");
 
 cityForm.addEventListener("submit", (e) => {
   getFormData(e)
@@ -17,4 +19,5 @@ cityForm.addEventListener("submit", (e) => {
       alert(error);
     });
 });
-connectToAPI("London");
+
+degreeButton.addEventListener("click", (e) => changeTempUnit(e));
