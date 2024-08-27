@@ -59,6 +59,8 @@ main {
 }
 .content {
   height: 90%;
+  display: flex;
+  flex-direction: column;
 }
 .current-day {
   background-color: var(--vivid-blue);
@@ -67,7 +69,6 @@ main {
 }
 .later-days .card {
   border: 1px double white;
-  border-radius: 10px;
   width: 100%;
   padding: 2px;
   align-items: center;
@@ -100,10 +101,12 @@ main {
 .later-days {
   display: grid;
   justify-items: center;
-  align-items: center;
+  align-items: start;
   justify-content: end;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(auto-fit, 2fr);
+  padding: 10px 0;
+  flex-grow: 1;
 }
 #degrees {
   all: unset;
