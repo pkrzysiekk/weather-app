@@ -7,6 +7,9 @@ export function getWeatherIcon(weatherStatus) {
     case "Overcast":
       icon = "☁️";
       break;
+    case "Clear":
+      icon = "☀️";
+      break;
     default:
       icon = "🌈";
   }

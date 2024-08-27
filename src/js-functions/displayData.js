@@ -12,8 +12,8 @@ export function displayData(data) {
     const conditionsParagraph = document.createElement("p");
     const weatherIcon = document.createElement("p");
     dayParagraph.textContent = data[i].day.slice(5);
-    minTempParagraph.textContent = `Min temp: ${data[i].tempMin}`;
-    maxTempParagraph.textContent = `Max temp: ${data[i].tempMax}`;
+    minTempParagraph.textContent = `Min temp: ${data[i].tempMin} °F`;
+    maxTempParagraph.textContent = `Max temp: ${data[i].tempMax} °F`;
     conditionsParagraph.textContent = data[i].conditions;
     weatherIcon.textContent = getWeatherIcon(data[i].conditions);
 
