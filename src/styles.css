@@ -1,3 +1,7 @@
+:root {
+  --vivid-blue: #02a1c2;
+  --blue: #2196f2;
+}
 @font-face {
   font-family: Roboto;
   src: url("./fonts/roboto.woff2");
@@ -8,7 +12,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #2196f2;
+  background-color: var(--blue);
   height: 100vh;
   font-family: Roboto;
   color: white;
@@ -55,21 +59,41 @@ main {
   height: 80%;
 }
 .current-day {
-  background-color: #3fa5f4;
+  background-color: var(--vivid-blue);
   border-radius: 20px;
   border-bottom: 1px double white;
+  padding-top: 20px;
 }
-.current-day .card {
+.later-days .card {
+  border: 1px double white;
+  border-radius: 10px;
+  width: 100%;
+  padding: 2px;
+  align-items: center;
+}
+.current-day .card,
+.later-days .card {
   display: grid;
+  justify-items: end;
   grid-template-columns: 1fr 1fr;
-  justify-self: end;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2px;
 }
-.current-day .card p:last-of-type {
-  background-color: wheat;
-  grid-column: 2/4;
-  grid-row: 1/5;
+.current-day .card p:last-of-type,
+.later-days .card p:last-of-type {
+  font-size: 5rem;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  padding-left: 20px;
   justify-self: start;
   align-self: center;
+}
+.current-day .card p:nth-of-type(4),
+.later-days .card p:nth-of-type(4) {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  justify-self: start;
+  padding-left: 20px;
 }
 .later-days {
   display: grid;
@@ -77,8 +101,4 @@ main {
   align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(auto-fit, 2fr);
-  gap: 20px;
-}
-.card {
-  text-align: center;
 }
