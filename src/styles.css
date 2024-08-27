@@ -52,5 +52,33 @@ main {
   text-align: start;
 }
 .content {
+  height: 80%;
+}
+.current-day {
+  background-color: #3fa5f4;
+  border-radius: 20px;
+  border-bottom: 1px double white;
+}
+.current-day .card {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-self: end;
+}
+.current-day .card p:last-of-type {
+  background-color: wheat;
+  grid-column: 2/4;
+  grid-row: 1/5;
+  justify-self: start;
+  align-self: center;
+}
+.later-days {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, 2fr);
+  gap: 20px;
+}
+.card {
+  text-align: center;
 }
