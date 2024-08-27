@@ -52,17 +52,18 @@ main {
   border-bottom: 1px double white;
 }
 .city-title ::placeholder {
+  text-align: center;
   color: white;
   text-align: start;
 }
 .content {
-  height: 80%;
+  height: 90%;
 }
 .current-day {
   background-color: var(--vivid-blue);
   border-radius: 20px;
   border-bottom: 1px double white;
-  padding-top: 20px;
+  padding-bottom: 1rem;
 }
 .later-days .card {
   border: 1px double white;
@@ -75,6 +76,7 @@ main {
 .later-days .card {
   display: grid;
   justify-items: end;
+  align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 2px;
@@ -99,6 +101,7 @@ main {
   display: grid;
   justify-items: center;
   align-items: center;
+  justify-content: end;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(auto-fit, 2fr);
 }
