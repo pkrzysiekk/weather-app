@@ -1,4 +1,5 @@
 import { changeTempUnit } from "./js-functions/changeTempUnit";
+import { changeUI } from "./js-functions/changeUI";
 import { clearMain } from "./js-functions/clearMain";
 import { connectToAPI } from "./js-functions/connectToAPI";
 import { displayData } from "./js-functions/displayData";
@@ -15,6 +16,7 @@ cityForm.addEventListener("submit", (e) => {
     .then((data) => getFormattedData(data))
     .then(clearMain())
     .then((formattedData) => displayData(formattedData))
+    .then((formattedData) => changeUI(formattedData))
     .catch((error) => {
       alert(error);
     });

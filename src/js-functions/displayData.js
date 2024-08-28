@@ -25,8 +25,8 @@ export function displayData(data) {
         data[i].tempMax
       )} °C`;
     }
-    conditionsParagraph.textContent = data[i].conditions;
-    weatherIcon.textContent = getWeatherIcon(data[i].conditions);
+    conditionsParagraph.textContent = data[i].conditions.split(",")[0];
+    weatherIcon.textContent = getWeatherIcon(data[i].conditions.split(",")[0]);
 
     card.appendChild(dayParagraph);
     card.appendChild(minTempParagraph);
@@ -39,4 +39,5 @@ export function displayData(data) {
       laterDaysDiv.appendChild(card);
     }
   }
+  return data;
 }
