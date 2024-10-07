@@ -13,7 +13,7 @@
 }
 body {
   background-color: var(--blue);
-  height: 100vh;
+  height: 120vh;
   font-family: Roboto;
   color: white;
   display: flex;
@@ -61,7 +61,7 @@ input ::placeholder {
   text-align: center;
 }
 .content {
-  height: 90%;
+  height: 80%;
   display: flex;
   flex-direction: column;
 }
@@ -70,20 +70,28 @@ input ::placeholder {
   border-radius: 20px;
   border-bottom: 1px double white;
 }
+.current-day .card {
+  padding-bottom: 1vh;
+}
 .later-days .card {
   border: 1px double white;
   width: 100%;
   padding: 2px;
   align-items: center;
 }
+
 .current-day .card,
 .later-days .card {
   display: grid;
   justify-items: end;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, clamp(100px, 225, 300));
   gap: 2px;
+}
+.card {
+  width: 100%;
+  height: 100%;
 }
 .current-day .card p:last-of-type,
 .later-days .card p:last-of-type {
